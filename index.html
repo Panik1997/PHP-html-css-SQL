@@ -1,0 +1,77 @@
+<!DOCTYPE HTML>
+<html lang="pl">
+<head>
+
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<title>Kinowow</title>
+	<meta name="description" content="Kinowow- kino dla Ciebie!!" />
+	
+	<link href="style.css" rel="stylesheet" type="text/css" />
+	<link href='http://fonts.googleapis.com/css?family=Lato:400,700&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+	
+</head>
+
+<body>
+
+		<div class="header">
+			<div class="logo">
+				<img src="kamera.png" style="float: left;  width: 20%; height: 20%;" alt="logo"/>
+				<span style="color: orange">Kinowow</span>
+				<div style="clear:both;"></div>
+			</div>
+		</div>
+		
+		<div class="nav">
+			<ol>
+				<li><a href="index.html">Strona główna</a></li>
+				<li><a href="uwagi.php">Uwagi do firmy</a></li>
+				<li><a href="opinie.php">Opinie</a></li>
+				<li><a href="galeria.html">Galeria</a></li>
+				<li><a href="onas.html">O nas</a></li>
+			</ol>
+		</div>
+		
+		<div class="content">
+			<p id="opisa"><b>Przenieś się do świata niezwykłości razem ze swoimi przyjaciółmi!<br/>
+			Już dziś przyjdź i wybierz jeden z wielu filmów, aby miło spędzić czas w gronie znajomych!</b></p>
+			<p>Zasady są proste:
+			<ul id="opisb">
+			<li>Przyjdź ze znajomymi</li>
+			<li>Kup bilet</li>
+			<li>Ciesz się nieskończonym popcornem i napojami przez cały wieczór!</li>
+			</ul><br/><p id="opisc"><b>
+			CENA: 150 ZŁ/OS*</b><br/>
+			</p>
+			
+			
+			<div class="footer">Kinowow- Kraków, ul. Długa 48<br/>
+			<p id="opisd">*Wejście obejmuje dostęp do sali kinowej danego wieczoru w godzinach 18:00-22:00</p></div>
+	</div>
+		<script src="jquery-1.11.3.min.js"></script>
+	
+	<script>
+
+	$(document).ready(function() {
+	var NavY = $('.nav').offset().top;
+	 
+	var stickyNav = function(){
+	var ScrollY = $(window).scrollTop();
+		  
+	if (ScrollY > NavY) { 
+		$('.nav').addClass('sticky');
+	} else {
+		$('.nav').removeClass('sticky'); 
+	}
+	};
+	 
+	stickyNav();
+	 
+	$(window).scroll(function() {
+		stickyNav();
+	});
+	});
+	</script>
+	
+</body>
+</html>

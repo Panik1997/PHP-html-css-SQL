@@ -1,0 +1,88 @@
+<!DOCTYPE HTML>
+<html lang="pl">
+<head>
+
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	
+	<title>Kinowow</title>
+	
+	<meta name="description" content="Kinowow- kino dla Ciebie!" />
+	
+	<link href="style.css" rel="stylesheet" type="text/css" />
+	<link href='http://fonts.googleapis.com/css?family=Lato:400,700&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+	
+</head>
+
+<body>
+
+		<div class="header">
+			<div class="logo">
+				<img src="kamera.png" style="float: left;  width: 20%; height: 20%;" alt="logo"/>
+				<span style="color: orange">Kinowow</span>
+				<div style="clear:both;"></div>
+			</div>
+		</div>
+		
+		<div class="nav">
+			<ol>
+				<li><a href="index.html">Strona główna</a></li>
+				<li><a href="uwagi.php">Uwagi do firmy</a></li>
+				<li><a href="opinie.php">Opinie</a></li>
+				<li><a href="galeria.html">Galeria</a></li>
+				<li><a href="onas.html">O nas</a></li>
+			</ol>
+		
+		</div>
+		
+		<div class="galeriazdj">
+		
+			<p><img id="duze_zdjecie" src="img/obr1.jpg" alt="Duze zdjecie"></p>
+ 
+	<ul id="miniaturka">
+		<li><a href="img/obr1.jpg" title="Obraz 1"><img src="img/obr1.jpg" alt="obrazek1"></a></li>
+		<li><a href="img/obr2.jpg" title="Obraz 2"><img src="img/obr2.jpg" alt="obrazek2"></a></li>
+		<li><a href="img/obr3.jpg" title="Obraz 3"><img src="img/obr3.jpg" alt="obrazek3"></a></li>
+		<li><a href="img/obr4.jpg" title="Obraz 4"><img src="img/obr4.jpg" alt="obrazek4"></a></li>
+		<li><a href="img/obr5.jpg" title="Obraz 5"><img src="img/obr5.jpg" alt="obrazek5"></a></li>
+		<li><a href="img/obr6.jpg" title="Obraz 6"><img src="img/obr6.jpg" alt="obrazek6"></a></li>
+		<li><a href="img/obr7.jpg" title="Obraz 7"><img src="img/obr7.jpg" alt="obrazek7"></a></li>
+		<li><a href="img/obr8.jpg" title="Obraz 8"><img src="img/obr8.jpg" alt="obrazek8"></a></li>
+	</ul></div>
+
+	<script>
+		var duze_zdjecie = document.getElementById('duze_zdjecie');
+ 
+		var miniaturka = document.getElementById('miniaturka');
+ 
+		miniaturka.onclick = function(e) {
+			e = e || window.event;
+			var target = e.target || e.srcElement;
+ 
+			while(target != this) {
+ 
+				if (target.nodeName == 'A') {
+					PokażMiniaturki(target.href, target.title);
+					return false;
+				}
+ 
+				target = target.parentNode;
+			}
+		}
+ 
+		function PokażMiniaturki(href, title) {
+			duze_zdjecie.src = href;
+			duze_zdjecie.alt = title;
+		}
+ 
+		var imgs = miniaturka.getElementsByTagName('img');
+ 
+		for(var i=0; i<imgs.length; i++) {
+			var url = imgs[i].parentNode.href;
+			var img = document.createElement('img');
+			img.src = url;
+		}
+	</script>
+	
+</body>
+</html>

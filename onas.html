@@ -1,0 +1,80 @@
+<!DOCTYPE HTML>
+<html lang="pl">
+<head>
+
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<title>Kinowow</title>
+	<meta name="description" content="Kinowow- kino dla Ciebie!" />
+	
+	<link href="style.css" rel="stylesheet" type="text/css" />
+	<link href='http://fonts.googleapis.com/css?family=Lato:400,700&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+	
+</head>
+
+<body>
+
+		<div class="header">
+			<div class="logo">
+				<img src="kamera.png" style="float: left;  width: 20%; height: 20%;" alt="logo"/>
+				<span style="color: orange">Kinowow</span>
+				<div style="clear:both;"></div>
+			</div>
+		</div>
+		
+		<div class="nav">
+			<ol>
+				<li><a href="index.html">Strona główna</a></li>
+				<li><a href="uwagi.php">Uwagi do firmy</a></li>
+				<li><a href="opinie.php">Opinie</a></li>
+				<li><a href="galeria.html">Galeria</a></li>
+				<li><a href="onas.html">O nas</a></li>
+			</ol>
+		</div>
+		
+		<div class="onas">
+			<p>
+			Jesteśmy młodą, skromną firmą w pełni zaangażowaną w to, co robimy. Nasz zespół składa się 
+			z młodych fanatyków dobrego kina. Powstaliśmy z myślą o urozmaiceniu spotkań ze znajomymi,
+			by w inny sposób móc cieszyć się wspólnie spędzonym czasem. Wiemy, co konieczne, aby
+			oglądany film należał do w pełni udanych, dlatego nasi klienci mogą się cieszyć nieskończonym
+			popcornem podczas pobytu w naszych progach. To miejsce jest również świetną opcją na urządzenie
+			urodzin dla dziecka. Wierzymy, że nasza oferta zadowoli każde dziecko. Oprócz nieskończonego popcornu
+			 posiadamy szereg napojów również do państwa dyspozycji. W razie zastrzerzeń, uwag lub chęci lepszego 
+			 dopasowania oferty prosimy o kontakt telefoniczny:</p>
+			 
+			 <h1><b>+48 666 777 888</b></h1>
+			
+			<h2>Sprawdź dojazd!</h2>
+			
+			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2560.967415418192!2d19.936047315717584!3d50.06817187942447!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47165b05a2fc231b%3A0xf2cd722a38392335!2zRMWCdWdhIDI4LCAzMC0wMDEgS3Jha8Ozdw!5e0!3m2!1spl!2spl!4v1529478823296" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+			
+			
+	</div>
+		<script src="jquery-1.11.3.min.js"></script>
+	
+	<script>
+
+	$(document).ready(function() {
+	var NavY = $('.nav').offset().top;
+	 
+	var stickyNav = function(){
+	var ScrollY = $(window).scrollTop();
+		  
+	if (ScrollY > NavY) { 
+		$('.nav').addClass('sticky');
+	} else {
+		$('.nav').removeClass('sticky'); 
+	}
+	};
+	 
+	stickyNav();
+	 
+	$(window).scroll(function() {
+		stickyNav();
+	});
+	});
+	</script>
+	
+</body>
+</html>
